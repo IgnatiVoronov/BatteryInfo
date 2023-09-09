@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/BatteryTitlesLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/BatteryChargeStatusTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Charge status"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/BatteryLevelTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Battery level, %"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/BatteryVoltageTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Voltage, V"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/BatteryHealthTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Battery health"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/BatteryTemperatureTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Temperature, C"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BatteryValuesLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/BatteryTitlesLinearLayout"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/BatteryTitlesLinearLayout">
+
+        <TextView
+            android:id="@+id/BatteryChargeStatusValueTextView"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="0"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/BatteryLevelValueTextView"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:hint="0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/BatteryVoltageValueTextView"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:hint="0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/BatteryHealthValueTextView"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="0"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/BatteryTemperatureValueTextView"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:hint="0"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
